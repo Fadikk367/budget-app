@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import dotenv from 'dotenv';
+import { Provider } from 'react-redux';
+
 import './i18n/i18n';
 import './index.css.js';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-dotenv.config();
+import configureStore from 'data/store';
+
+const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

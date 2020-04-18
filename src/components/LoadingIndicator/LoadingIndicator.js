@@ -13,6 +13,9 @@ const rotate = keyframes`
 const Root = styled.div`
   display: inline-block;
   position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
   width: 80px;
   height: 80px;
 

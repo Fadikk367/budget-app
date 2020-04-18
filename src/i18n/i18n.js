@@ -4,9 +4,6 @@ import { initReactI18next } from 'react-i18next';
 import CustomBackend from './CustomBackend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const token = '1bb1df2f49bde8541d3183a8d14c26d4'
-
-const id = '333707';
 
 i18n
   .use(CustomBackend)
@@ -40,18 +37,18 @@ i18n
           term: key,
         }];
         const payload = {
-          api_token: token,
+          api_token: process.env.REACT_APP_POEDITOR_TOKEN,
           data: JSON.stringify(data),
-          id,
+          id: process.env.REACT_APP_PROJECT_ID,
         };
 
         return payload;
       },
       parseLoadPayload: ({ lng }) => {
         const payload = {
-          api_token: token,
+          api_token: process.env.REACT_APP_POEDITOR_TOKEN,
           language: lng,
-          id,
+          id: process.env.REACT_APP_PROJECT_ID,
         };
 
         return payload;
