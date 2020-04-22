@@ -3,7 +3,11 @@ import {
   BUDGET_GET,
   BUDGET_GET_REQUEST,
   BUDGET_GET_SUCCES,
-  BUDGET_GET_FAILFURE
+  BUDGET_GET_FAILURE,
+
+  BUDGET_CATEGORIES_GET_REQUEST,
+  BUDGET_CATEGORIES_GET_SUCCES,
+  BUDGET_CATEGORIES_GET_FAILURE
 } from 'data/constants';
 
 const initialState = {
@@ -30,11 +34,33 @@ const budgetReducer = (state = initialState, action) => {
         budget: action.payload,
         loadingState: loadingStateCpy
       };
-    case BUDGET_GET_FAILFURE:
+    case BUDGET_GET_FAILURE:
       delete loadingStateCpy.BUDGET_GET_REQUEST;
       return {
         ...state,
         budget: {},
+        loadingState: loadingStateCpy
+      }
+    case BUDGET_CATEGORIES_GET_REQUEST:
+      return {
+        ...state,
+        loadingState: {
+          ...state.loadingState,
+          [action.type]: LOADING_STATES.LOADING
+        }
+      }
+    case BUDGET_CATEGORIES_GET_SUCCES:
+      delete loadingStateCpy.BUDGET_CATEGORIES_GET_REQUEST;
+      return {
+        ...state,
+        budgetCategories: action.payload,
+        loadingState: loadingStateCpy
+      };
+    case BUDGET_CATEGORIES_GET_FAILURE:
+      delete loadingStateCpy.BUDGET_CATEGORIES_GET_REQUEST;
+      return {
+        ...state,
+        budgetCategories: {},
         loadingState: loadingStateCpy
       }
     default:
