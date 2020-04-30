@@ -1,26 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
 
 import { Navigation, Wrapper, LoadingIndicator, Button } from 'components';
+import Budget from './pages/BudgetPage';
 import GlobalStyles from'./index.css.js';
-
-import { fetchBudget, fetchBudgetCategories } from 'data/actions/budgetActions';
 
 import theme from 'utils/theme';
 
 
-const App = ({ budget, fetchBudget, fetchBudgetCategories }) => {
-  useEffect(() => {
-    fetchBudget(1);
-    fetchBudgetCategories(1)
-    return () => {
-      console.log("test");
-    }
-  }, [fetchBudget, fetchBudgetCategories]);
+const App = props => {
   const { i18n } = useTranslation();
   return (
     <>
@@ -41,7 +32,9 @@ const App = ({ budget, fetchBudget, fetchBudgetCategories }) => {
         <Wrapper>
           <Switch>
             <Route path="/" exact>Homepage</Route>
-            <Route path="/budget" exact>Budget page</Route>
+            <Route path="/budget" exact>
+              <Budget />
+            </Route>
           </Switch>
         </Wrapper>
       </Router>
@@ -49,20 +42,11 @@ const App = ({ budget, fetchBudget, fetchBudgetCategories }) => {
   );
 }
 
-const ConnectedApp = connect(state => {
-  return {
-    budget: state.budget.budget
-  }
-}, {
-  fetchBudgetCategories,
-  fetchBudget
-})(App);
-
 const RootApp = () => {
   return (
     <ThemeProvider theme={theme}>
       <React.Suspense fallback={<LoadingIndicator />}>
-        <ConnectedApp />
+        <App />
       </React.Suspense>
     </ThemeProvider>
   )

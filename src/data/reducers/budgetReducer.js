@@ -1,17 +1,17 @@
 import {
   LOADING_STATES,
-  BUDGET_GET,
+
   BUDGET_GET_REQUEST,
   BUDGET_GET_SUCCES,
   BUDGET_GET_FAILURE,
-
+  
   BUDGET_CATEGORIES_GET_REQUEST,
   BUDGET_CATEGORIES_GET_SUCCES,
   BUDGET_CATEGORIES_GET_FAILURE
 } from 'data/constants';
 
 const initialState = {
-  loadingState: {},
+  loadingState: null,
   budget: {},
   budgetCategories: [],
 }
