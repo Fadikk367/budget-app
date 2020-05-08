@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { Grid } from './BudgetPage.css';
 import BudgetCategoryList from './components/BudgetCategoryList'
+import BudgetTransactionList from 'pages/BudgetPage/components/BudgetTransactionList';
 
 import { fetchBudget, fetchBudgetCategories } from 'data/actions/budgetActions';
 import { fetchAllCategories } from 'data/actions/commonActions';
@@ -34,7 +35,7 @@ const BudgetPage = ({
         )}
       </section>
       <section>
-        {isLoaded ? 'Transactions List' : (
+        {isLoaded ? <BudgetTransactionList /> : (
           <LoadingIndicator />
         )}
       </section>

@@ -7,13 +7,16 @@ import {
   
   BUDGET_CATEGORIES_GET_REQUEST,
   BUDGET_CATEGORIES_GET_SUCCES,
-  BUDGET_CATEGORIES_GET_FAILURE
+  BUDGET_CATEGORIES_GET_FAILURE,
+
+  SET_SELECTED_PARENT_CATEGORY_ID
 } from 'data/constants';
 
 const initialState = {
   loadingState: null,
   budget: {},
   budgetCategories: [],
+  selectedParentCategoryId: undefined
 }
 
 const budgetReducer = (state = initialState, action) => {
@@ -62,6 +65,11 @@ const budgetReducer = (state = initialState, action) => {
         ...state,
         budgetCategories: {},
         loadingState: loadingStateCpy
+      }
+    case SET_SELECTED_PARENT_CATEGORY_ID:
+      return {
+        ...state,
+        selectedParentCategoryId: action.payload
       }
     default:
       return state;
