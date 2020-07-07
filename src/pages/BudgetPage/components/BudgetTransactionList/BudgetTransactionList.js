@@ -53,8 +53,8 @@ const BudgetTransactionList = ({
   return (
     <List>
       {Object.entries(groupedTransactions).map(([key, transactions]) => (
-        <li>
-          <ul key={key}>
+        <li key={key}>
+          <ul>
             {transactions.map(transaction => (
               <ListItem key={transaction.id}>
                 <div>{transaction.description}</div>
@@ -74,7 +74,7 @@ const BudgetTransactionList = ({
 
 export default connect(state => ({
     transactions: state.budget.budget.transactions,
-    butgetCategories: state.budget.budgetCategories,
+    budgetCategories: state.budget.budgetCategories,
     allCategories: state.common.allCategories,
     selectedParentCategoryId: state.budget.selectedParentCategoryId
 }))(BudgetTransactionList);

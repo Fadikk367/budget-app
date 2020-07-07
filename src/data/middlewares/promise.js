@@ -6,7 +6,7 @@ export default () => next => action => {
     return next(action);
   }
 
-  const SUCCESS = `${type}_SUCCES`;
+  const SUCCESS = `${type}_SUCCESS`;
   const FAILURE = `${type}_FAILURE`;
   const REQUEST = `${type}_REQUEST`;
 
@@ -18,7 +18,7 @@ export default () => next => action => {
       next({ 
         type: SUCCESS, 
         payload: data, 
-        rest 
+        ...rest 
       });
     })
     .catch(error => {

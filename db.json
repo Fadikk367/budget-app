@@ -224,6 +224,94 @@
       "date": "2020-02-20",
       "budgetId": "1",
       "id": "jHBfyjy"
+    },
+    {
+      "description": "moja nowa trasakcja",
+      "amount": 1000,
+      "date": "2020-07-18",
+      "categoryId": "3",
+      "budgetId": "1",
+      "id": "sBKWurQ"
+    },
+    {
+      "description": "byczq, +1",
+      "amount": 69,
+      "categoryId": "4",
+      "date": "2020-07-09",
+      "budgetId": "1",
+      "id": "bE97eJs"
+    },
+    {
+      "description": "test zamykania modalu",
+      "amount": 80,
+      "categoryId": "4",
+      "date": "2020-07-08",
+      "budgetId": "1",
+      "id": "UHHlAYX"
+    },
+    {
+      "description": "message test",
+      "amount": 100,
+      "categoryId": "4",
+      "date": "2020-07-02",
+      "budgetId": "1",
+      "id": "jR-nXuU"
+    },
+    {
+      "description": "test message 2",
+      "amount": 10,
+      "categoryId": "3",
+      "date": "2020-07-03",
+      "budgetId": "1",
+      "id": "Sio-9sS"
+    },
+    {
+      "description": "article send by form",
+      "amount": 181,
+      "categoryId": "5",
+      "date": "2020-07-08",
+      "budgetId": "1",
+      "id": "GzCPCxX"
+    },
+    {
+      "description": "article send by form",
+      "amount": 160,
+      "categoryId": "6",
+      "date": "2020-07-02",
+      "budgetId": "1",
+      "id": "StuZyOh"
+    },
+    {
+      "description": "article send by form",
+      "amount": 160,
+      "categoryId": "2",
+      "date": "2020-07-02",
+      "budgetId": "1",
+      "id": "qaMg4r3"
+    },
+    {
+      "description": "article send by form",
+      "amount": 160,
+      "categoryId": "2",
+      "date": "2020-06-30",
+      "budgetId": "1",
+      "id": "4g_g4A6"
+    },
+    {
+      "description": "article send by form",
+      "amount": 160,
+      "categoryId": "2",
+      "date": "2020-07-03",
+      "budgetId": "1",
+      "id": "Gk86mKg"
+    },
+    {
+      "description": "article send by form",
+      "amount": 160,
+      "categoryId": "3",
+      "date": "2020-07-02",
+      "budgetId": "1",
+      "id": "GZ7FCYx"
     }
   ]
 }

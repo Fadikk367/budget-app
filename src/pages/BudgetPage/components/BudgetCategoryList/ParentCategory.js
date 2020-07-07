@@ -23,7 +23,7 @@ const ParentCategory = ({ name, onClick, categories, transactions, amount }) => 
 
     const spentOnParentCategory = parentCategoryTransactions
       .reduce((acc, transaction) => acc + transaction.amount, 0);
-    console.log(budgeted, spentOnParentCategory, parentCategoryTransactions);
+      
     const totalLeft = budgeted
         ? budgeted - spentOnParentCategory
         : null;

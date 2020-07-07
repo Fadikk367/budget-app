@@ -2,7 +2,7 @@ import {
   LOADING_STATES,
 
   ALL_CATEGORIES_GET_REQUEST,
-  ALL_CATEGORIES_GET_SUCCES,
+  ALL_CATEGORIES_GET_SUCCESS,
   ALL_CATEGORIES_GET_FAILFURE
 } from 'data/constants';
 
@@ -22,7 +22,7 @@ const commonReducer = (state = initialState, action) => {
           [action.type]: LOADING_STATES.LOADING
         }
       }
-    case ALL_CATEGORIES_GET_SUCCES:
+    case ALL_CATEGORIES_GET_SUCCESS:
       delete newLoadingState.ALL_CATEGORIES_GET_REQUEST;
       return {
         ...state,
