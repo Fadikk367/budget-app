@@ -1,3 +1,12 @@
+### Budget App project based on React Semiadvanced course on Udemy by Samuraj Programwoania
+
+### technologies:
+- React
+- Redux
+- Styled Components
+- POEditor (internationalization)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
